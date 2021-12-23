@@ -46,7 +46,7 @@ app.post('/users/', (req, res) => {
     const database = getDatabase(firebase);
     // gerando um id de 1 a 10000
     const id = Math.floor(Math.random() * 10000) + 1;
-
+      console.log(id)
     // salvando no firebase na "tabela" /users"
     set(ref(database, 'users/' + id), {
         nome,
@@ -55,7 +55,7 @@ app.post('/users/', (req, res) => {
         password,
     });
 
-    res.send(id)
+    res.sendStatus(200)
 });
 
 // definindo uma rota de GET para pegar usuários

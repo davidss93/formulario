@@ -5,11 +5,11 @@
 </head>
 <body>
     <h1>Credenciais obrigatórias:</h1>
-    <form action="/users/:id" method="GET">
-        <input type="nome" name="nome" required>
-        <input type="email" name="email" required>
-        <input type="number" name="telefone">
-        <input type="password" name="pass" minlength="8" required>
+    <form action="http://localhost:3000/users/" method="POST">
+        <input type="text" name="nome" value="nome" required>
+        <input type="email" name="email" value="email" required>
+        <input type="number" name="telefone" value="telefone">
+        <input type="password" name="pass" minlength="8" value="pass" required>
         <input type="submit" value="Login">
     </form>
 </body>
